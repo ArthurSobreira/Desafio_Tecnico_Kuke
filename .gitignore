@@ -1,0 +1,31 @@
+# Python
+venv/
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.log
+db.sqlite3
+
+# Django
+*.env
+/static/
+media/
+
+# Node.js (Next.js)
+node_modules/
+.next/
+out/
+*.log
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor
+.vscode/
+.dist/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
