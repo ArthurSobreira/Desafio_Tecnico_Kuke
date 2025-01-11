@@ -8,6 +8,5 @@ class Movie(models.Model):
 	description = models.TextField()
 	year = models.IntegerField()
 
-	# Returns the name of the movie
 	def	__str__(self):
 		return self.name
