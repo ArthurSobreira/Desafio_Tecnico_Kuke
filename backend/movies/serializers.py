@@ -1,9 +1,9 @@
 from rest_framework import serializers
-from .models import Movie
+from .models import Filme
 
 
-# Serializer for the Movie model
-class MovieSerializer(serializers.ModelSerializer):
+# Serializer for the Filme model
+class FilmeSerializer(serializers.ModelSerializer):
 	class Meta:
-		model = Movie
-		fields = ['id', 'name', 'image_url', 'description', 'year']
+		model = Filme
+		fields = ['id', 'nome', 'imagem_url', 'descricao', 'ano']
