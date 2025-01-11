@@ -1,11 +1,11 @@
 from django.contrib import admin
-from .models import Movie
+from .models import Filme
 
 
-class MovieAdmin(admin.ModelAdmin):
-	list_display = ('name', 'year')
-	search_fields = ('name',)
-	list_filter = ('year',)
+class FilmeAdmin(admin.ModelAdmin):
+	list_display = ('nome', 'ano')
+	search_fields = ('nome',)
+	list_filter = ('ano',)
 
-# Register the Movie model
-admin.site.register(Movie, MovieAdmin)
+# Register the Filme model
+admin.site.register(Filme, FilmeAdmin)
