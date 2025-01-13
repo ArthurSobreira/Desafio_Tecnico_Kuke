@@ -8,13 +8,13 @@
 
 ### 1. Movie Listing
 
-**Method:** `GET`.
-**Endpoint:** `/api/filmes/`.
-**Description:** Returns a list of all movies registered in the system. The movies are returned with the following fields:
+- **Method:** `GET`
+- **Endpoint:** `/api/filmes/`
+- **Description:** Returns a list of all movies registered in the system. The movies are returned with the following fields:
 
-- `id`: Unique identifier of the movie (auto-generated).
-- `nome`: Movie name.
-- `imagem_url`: URL of the movie image.
+	- `id`: Unique identifier of the movie (auto-generated).
+	- `nome`: Movie name.
+	- `imagem_url`: URL of the movie image.
 
 **Example response:**
 
@@ -37,15 +37,15 @@
 
 ### 2. Movie Details
 
-**Method:** `GET`.
-**Endpoint:** `/api/filmes/{id}/`.
-**Description:** Returns the details of a specific movie. The details include the following fields:
+- **Method:** `GET`.
+- **Endpoint:** `/api/filmes/{id}/`.
+- **Description:** Returns the details of a specific movie. The details include the following fields:
 
-- `id`: Unique identifier of the movie (auto-generated).
-- `nome`: Movie name.
-- `imagem_url`: URL of the movie image.
-- `descricao`: Detailed description of the movie.
-- `ano`: Movie's release year.
+	- `id`: Unique identifier of the movie (auto-generated).
+	- `nome`: Movie name.
+	- `imagem_url`: URL of the movie image.
+	- `descricao`: Detailed description of the movie.
+	- `ano`: Movie's release year.
 
 **Example response:**
 
