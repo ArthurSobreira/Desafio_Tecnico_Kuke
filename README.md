@@ -71,7 +71,7 @@ The server will be started and the API will be accessible at `http://127.0.0.1:8
    $> python3 manage.py clear_movies
    ```
 
-* Once the database is populated, run the server and access `http://127.0.0.1:8000/api/filmes/` to see the newly updated movies
+* Once the database is populated, run the server and access `http://127.0.0.1:8000/api/filmes/` to see the newly updated movies:
 
    ```bash
    $> python3 manage.py runserver
