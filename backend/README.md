@@ -10,8 +10,8 @@
 
 ### 1. Movie Listing
 
-**Method:** `GET`<br>
-**Endpoint:** `/api/filmes/`<br>
+**Method:** `GET` <br>
+**Endpoint:** `/api/filmes/` <br>
 **Description:** Returns a list of all movies registered in the system. The movies are returned with the following fields:
 
 - `id`: Unique identifier of the movie (auto-generated).
@@ -39,8 +39,8 @@
 
 ### 2. Movie Details
 
-**Method:** `GET`<br>
-**Endpoint:** `/api/filmes/{id}/`<br>
+**Method:** `GET` <br>
+**Endpoint:** `/api/filmes/{id}/ `<br>
 **Description:** Returns the details of a specific movie. The details include the following fields:
 
 - `id`: Unique identifier of the movie (auto-generated).
