@@ -4,8 +4,6 @@
 > <i>movie details. The API is ready to be consumed by a frontend application (Next.js in this project's case) and has</i>
 > <i>the following endpoints:</i>
 
-<br>
-
 ## API Endpoints
 
 ### 1. Movie Listing
@@ -40,7 +38,7 @@
 ### 2. Movie Details
 
 **Method:** `GET` <br>
-**Endpoint:** `/api/filmes/{id}/ `<br>
+**Endpoint:** `/api/filmes/{id}/` <br>
 **Description:** Returns the details of a specific movie. The details include the following fields:
 
 - `id`: Unique identifier of the movie (auto-generated).
