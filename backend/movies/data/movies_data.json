@@ -1,0 +1,26 @@
+[
+	{
+	  "nome": "Inception",
+	  "imagem_url": "https://images.pexels.com/photos/1117132/pexels-photo-1117132.jpeg",
+	  "descricao": "Um ladrão que invade sonhos tenta executar o golpe perfeito implantando uma ideia na mente de uma vítima.",
+	  "ano": 2010
+	},
+	{
+	  "nome": "Interstellar",
+	  "imagem_url": "https://images.pexels.com/photos/2568473/pexels-photo-2568473.jpeg",
+	  "descricao": "Uma equipe de exploradores viaja através de um buraco de minhoca para garantir a sobrevivência da humanidade.",
+	  "ano": 2014
+	},
+	{
+	  "nome": "The Matrix",
+	  "imagem_url": "https://images.pexels.com/photos/533575/pexels-photo-533575.jpeg",
+	  "descricao": "Um programador descobre que a realidade em que vive é uma simulação controlada por máquinas.",
+	  "ano": 1999
+	},
+	{
+	  "nome": "The Dark Knight",
+	  "imagem_url": "https://images.pexels.com/photos/2131694/pexels-photo-2131694.jpeg",
+	  "descricao": "Batman enfrenta seu maior inimigo, o Coringa, que ameaça trazer caos à cidade de Gotham.",
+	  "ano": 2008
+	}
+]
