@@ -37,13 +37,13 @@
    $> cd backend/
    ```
 
-* Install dependencies:
+* Install backend dependencies:
 
     ```bash
    $> pip install -r requirements.txt
    ```
 
-* Perform migrations:
+* Perform database migrations:
 
    ```bash
    $> python3 manage.py migrate
