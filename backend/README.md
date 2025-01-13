@@ -1,15 +1,15 @@
 # Movie Catalog API
 
-> <i>This is a simple movie catalog API built with <strong>Django</strong> and <strong>Django REST Framework (DRF)</strong>.</i>
-> <i>It allows you to list and access movie details. The API is ready to be consumed by a frontend application</i>
-> <i> (<strong>Next.js</strong> in this project's case) and has the following endpoints:</i>
+> *This is a simple movie catalog API built with **Django** and **Django REST Framework (DRF)**.*
+> *It allows you to list and access movie details. The API is ready to be consumed by a frontend application*
+> *(**Next.js** in this project's case) and has the following endpoints:*
 
 ## API Endpoints
 
 ### 1. Movie Listing
 
-**Method:** `GET` <br>
-**Endpoint:** `/api/filmes/` <br>
+**Method:** `GET`.
+**Endpoint:** `/api/filmes/`.
 **Description:** Returns a list of all movies registered in the system. The movies are returned with the following fields:
 
 - `id`: Unique identifier of the movie (auto-generated).
@@ -37,8 +37,8 @@
 
 ### 2. Movie Details
 
-**Method:** `GET` <br>
-**Endpoint:** `/api/filmes/{id}/` <br>
+**Method:** `GET`.
+**Endpoint:** `/api/filmes/{id}/`.
 **Description:** Returns the details of a specific movie. The details include the following fields:
 
 - `id`: Unique identifier of the movie (auto-generated).
