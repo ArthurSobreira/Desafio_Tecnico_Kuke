@@ -8,7 +8,6 @@ class MoviesListSerializer(serializers.ModelSerializer):
 		model = Filme
 		fields = ['id', 'nome', 'imagem_url']
 
-
 # Serializer for getting details of a movie
 class MovieDetailSerializer(serializers.ModelSerializer):
 	class Meta:
