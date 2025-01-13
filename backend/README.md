@@ -1,57 +1,58 @@
 # Movie Catalog API
 
-Esta é uma API simples para catalogo de filmes, criada com Django e Django REST Framework (DRF). Ela permite listar e acessar detalhes de filmes. A API está pronta para ser consumida por uma aplicação frontend (Next.js no caso deste projeto) e possui os seguintes endpoints:
+> *This is a simple movie catalog API built with **Django** and **Django REST Framework (DRF)**.*
+> *It allows you to list and access movie details. The API is ready to be consumed by a frontend application*
+> *(**Next.js** in this project's case) and has the following endpoints:*
 
-## Endpoints da API
+## 1. Movie Listing Endpoint
 
-### 1. Listagem de Filmes
+- **Method:** `GET`
+- **Endpoint:** `/api/filmes/`
+- **Description:** Returns a list of all movies registered in the system. The movies are returned with the following fields:
 
-**Método:** `GET` <br>
-**Endpoint:** `/api/filmes/` <br>
-**Descrição:** Retorna uma lista de todos os filmes cadastrados no sistema. Os filmes são retornados com os seguintes campos:
+	- `id`: Unique identifier of the movie (auto-generated).
+	- `nome`: Movie name.
+	- `imagem_url`: URL of the movie image.
 
-- `id`: Identificador único do filme (auto gerado).
-- `nome`: Nome do filme.
-- `imagem_url`: URL da imagem do filme.
-
-**Exemplo de resposta:**
+**Example response:**
 
 ```json
 [
     {
         "id": 1,
-        "nome": "O Poderoso Chefão",
-        "imagem_url": "https://example.com/images/poderoso-chefao.jpg"
+        "nome": "The Godfather",
+        "imagem_url": "https://example.com/images/the-godfather.jpg"
     },
     {
         "id": 2,
-        "nome": "Matrix",
+        "nome": "The Matrix",
         "imagem_url": "https://example.com/images/matrix.jpg"
     }
 ]
 ```
 
+<br>
 
-### 2. Detalhes de um Filme
+## 2. Movie Details Endpoint
 
-**Método:** `GET` <br>
-**Endpoint:** `/api/filmes/{id}/` <br>
-**Descrição:** Retorna os detalhes de um filme em específico. Os detalhes incluem os seguintes campos:
+- **Method:** `GET`
+- **Endpoint:** `/api/filmes/{id}/`
+- **Description:** Returns the details of a specific movie. The details include the following fields:
 
-- `id`: Identificador único do filme (auto gerado).
-- `nome`: Nome do filme.
-- `imagem_url`: URL da imagem do filme.
-- `descricao`: Descrição detalhada do filme.
-- `ano`: Ano de lançamento do filme.
+	- `id`: Unique identifier of the movie (auto-generated).
+	- `nome`: Movie name.
+	- `imagem_url`: URL of the movie image.
+	- `descricao`: Detailed description of the movie.
+	- `ano`: Movie's release year.
 
-**Exemplo de resposta:**
+**Example response:**
 
 ```json
 {
     "id": 1,
-    "nome": "O Poderoso Chefão",
-    "imagem_url": "https://example.com/images/poderoso-chefao.jpg",
-    "descricao": "Don Vito Corleone é o chefe de uma poderosa família mafiosa em Nova York. A história segue seu filho Michael...",
-    "ano": 1972
+    "name": "The Godfather",
+    "image_url": "https://example.com/images/the-godfather.jpg",
+    "description": "Don Vito Corleone is the head of a powerful mafia family in New York. The story follows his son Michael...",
+    "year": 1972
 }
 ```
