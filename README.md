@@ -31,10 +31,16 @@
      $> venv\Scripts\activate
      ```
 
-* Install dependencies
+* Enter the backend folder
 
    ```bash
-   $> pip install -r backend/requirements.txt
+   $> cd backend/
+   ```
+
+* Install dependencies
+
+    ```bash
+   $> pip install -r requirements.txt
    ```
 
 * Perform migrations
