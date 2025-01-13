@@ -1,109 +1,63 @@
-
 # Movie Catalog Project
 
-Este projeto consiste em um sistema simples de catalogo de filmes, dividido em duas partes:
+> *This project aims to build a movie catalog web application, divided into two main layers:*
+> * *Backend: Responsible for providing a **RESTful API** that manages and delivers movie data. This layer was developed using **Django** and **Django REST Framework (DRF)**, ensuring a robust and scalable backend.*
+> * *Frontend: An interface built with **Next.js** that will consume the data provided by the backend and display it to the user in an interactive and responsive web application.*
 
-1. **Backend** : Responsável por fornecer a API que gerencia e disponibiliza os dados dos filmes.
-2. **Frontend** : Uma interface que consome a API do backend e apresenta os filmes ao usuário. *(Em desenvolvimento)*
+## Backend - Responsibilities and Operation
 
-Atualmente, a parte do backend está concluída e pronta para uso.
+* The backend serves as the foundation of the Movie Catalog project, providing data management and an API interface for the frontend. Built with Django and Django REST Framework (DRF), it ensures reliable data handling and smooth front-end communication. (for more information about the API, access it [README](backend/README.md)).
 
-## Backend - Como Rodar o Projeto
+### Steps to Run the Backend
 
-### Requisitos
-
-* Python 3.8 ou superior
-* Virtualenv (opcional, mas recomendado)
-* SQLite3 (ou outro banco de dados configurado no Django)
-
-### Passos para Executar o Backend
-
-1. **Clonar o repositório**
-
+* Make sure you clone the repository with the following command
+  
    ```bash
-   git clone https://github.com/seu-usuario/movie-catalog.git
-   cd movie-catalog
+   $> git clone git@github.com:ArthurSobreira/Desafio_Tecnico_Kuke.git
    ```
-2. **Criar e ativar o ambiente virtual**
+
+* Create and activate the virtual environment
 
    * Unix/macOS:
+  
      ```bash
-     python3 -m venv venv
-     source venv/bin/activate
+     $> python3 -m venv venv
+     $> source venv/bin/activate
      ```
+  
    * Windows:
      ```bash
-     python -m venv venv
-     venv\Scripts\activate
+     $> python -m venv venv
+     $> venv\Scripts\activate
      ```
-3. **Instalar as dependências**
+
+* Install dependencies
 
    ```bash
-   pip install -r requirements.txt
+   $> pip install -r requirements.txt
    ```
-4. **Realizar as migrações**
+
+* Perform migrations
 
    ```bash
-   python manage.py migrate
+   $> python3 manage.py migrate
    ```
-5. **Rodar o servidor de desenvolvimento**
+
+* Run the development server
 
    ```bash
-   python manage.py runserver
+   $> python3 manage.py runserver
    ```
 
-   O servidor será iniciado e a API estará acessível em `http://127.0.0.1:8000/api/filmes/`.
+   The server will be started and the API will be accessible at `http://127.0.0.1:8000/api/filmes/`.
 
-### Endpoints Disponíveis
+### Population and Data Cleaning
 
-1. **Listagem de Filmes**
-   * **Método:** `GET`
-   * **Endpoint:** `/api/filmes/`
-   * **Descrição:** Retorna uma lista de todos os filmes cadastrados no sistema.
-2. **Detalhes de um Filme**
-   * **Método:** `GET`
-   * **Endpoint:** `/api/filmes/{id}/`
-   * **Descrição:** Retorna os detalhes completos de um filme específico com base no seu `id`.
 
-### População de Dados
-
-Você pode popular o banco de dados com filmes fictícios utilizando o script `populate_movies.py`:
-
-1. Crie um arquivo `movies_data.json` com os dados desejados.
-2. Execute o comando abaixo para iniciar o shell do Django:
-
-   ```bash
-   python manage.py shell
-   ```
-3. No shell interativo, rode o seguinte código:
-
-   ```python
-   from movies.utils import populate_movies
-   populate_movies('movies_data.json')
-   ```
-
-   Isso irá popular o banco de dados com os filmes presentes no arquivo JSON.
-
-### Limpeza de Dados
-
-Para limpar todos os filmes do banco de dados, execute o seguinte comando no shell do Django:
-
-```bash
-python manage.py shell
-```
-
-No shell interativo, execute:
-
-```python
-from movies.models import Filme
-Filme.objects.all().delete()
-```
-
-Isso irá remover todos os filmes cadastrados no banco de dados.
 
 ---
 
-## Frontend - Como Rodar o Projeto
+## Frontend - - Responsibilities and Operation
 
 *(Esta seção será preenchida quando o desenvolvimento do frontend estiver concluído.)*
 
