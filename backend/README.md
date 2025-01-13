@@ -37,8 +37,8 @@
 
 ### 2. Movie Details
 
-- **Method:** `GET`.
-- **Endpoint:** `/api/filmes/{id}/`.
+- **Method:** `GET`
+- **Endpoint:** `/api/filmes/{id}/`
 - **Description:** Returns the details of a specific movie. The details include the following fields:
 
 	- `id`: Unique identifier of the movie (auto-generated).
