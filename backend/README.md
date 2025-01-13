@@ -1,8 +1,8 @@
 # Movie Catalog API
 
-> <i>This is a simple movie catalog API built with Django and Django REST Framework (DRF). It allows you to list and access</i>
-> <i>movie details. The API is ready to be consumed by a frontend application (Next.js in this project's case) and has</i>
-> <i>the following endpoints:</i>
+> <i>This is a simple movie catalog API built with <strong>Django</strong> and <strong>Django REST Framework (DRF)</strong>.</i>
+> <i>It allows you to list and access movie details. The API is ready to be consumed by a frontend application</i>
+> <i> (<strong>Next.js</strong> in this project's case) and has the following endpoints:</i>
 
 ## API Endpoints
 
