@@ -10,65 +10,75 @@
 
 ### Steps to Run the Backend
 
-* Make sure you clone the repository with the following command
+* Make sure you clone the repository with the following command:
   
    ```bash
    $> git clone git@github.com:ArthurSobreira/Desafio_Tecnico_Kuke.git
    ```
 
-* Create and activate the virtual environment
+* Create and activate the virtual environment:
 
-   * Unix/macOS:
+   * Unix/macOS
   
      ```bash
      $> python3 -m venv venv
      $> source venv/bin/activate
      ```
   
-   * Windows:
+   * Windows
      ```bash
      $> python -m venv venv
      $> venv\Scripts\activate
      ```
 
-* Enter the backend folder
+* Enter the backend folder:
 
    ```bash
    $> cd backend/
    ```
 
-* Install dependencies
+* Install dependencies:
 
     ```bash
    $> pip install -r requirements.txt
    ```
 
-* Perform migrations
+* Perform migrations:
 
    ```bash
    $> python3 manage.py migrate
    ```
 
-* Run the development server
+* Run the development server:
 
    ```bash
    $> python3 manage.py runserver
    ```
 
-   The server will be started and the API will be accessible at `http://127.0.0.1:8000/api/filmes/`.
+The server will be started and the API will be accessible at `http://127.0.0.1:8000/api/filmes/`.
 
 ### Population and Data Cleaning
 
+* By default, the database will be empty when you start the program, so it is necessary to populate it, and for this, we will use some movies of [movies_data.json](backend/movies/data/movies_data.json) file, by running the following command:
 
+   ```bash
+   $> python3 manage.py populate_movies
+   ```
+
+* You can also clear movies that are already present in the database with the following command:
+
+   ```bash
+   $> python3 manage.py clear_movies
+   ```
+
+* Once the database is populated, run the server and access `http://127.0.0.1:8000/api/filmes/` to see the newly updated movies
+
+   ```bash
+   $> python3 manage.py runserver
+   ```
 
 ---
 
-## Frontend - - Responsibilities and Operation
+## Frontend - Responsibilities and Operation
 
 *(Esta seção será preenchida quando o desenvolvimento do frontend estiver concluído.)*
-
----
-
-## Licença
-
-Este projeto está licenciado sob a MIT License. Consulte o arquivo [LICENSE](https://chatgpt.com/c/LICENSE) para mais detalhes.
