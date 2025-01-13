@@ -6,7 +6,9 @@ Esta é uma API simples para catalogo de filmes, criada com Django e Django REST
 
 ### 1. Listagem de Filmes
 
-**Método:** `GET`**Endpoint:** `/api/filmes/`**Descrição:** Retorna uma lista de todos os filmes cadastrados no sistema. Os filmes são retornados com os seguintes campos:
+**Método:** `GET`
+**Endpoint:** `/api/filmes/`
+**Descrição:** Retorna uma lista de todos os filmes cadastrados no sistema. Os filmes são retornados com os seguintes campos:
 
 - `id`: Identificador único do filme (auto gerado).
 - `nome`: Nome do filme.
