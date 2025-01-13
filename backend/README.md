@@ -1,6 +1,10 @@
 # Movie Catalog API
 
-Esta é uma API simples para catalogo de filmes, criada com Django e Django REST Framework (DRF). Ela permite listar e acessar detalhes de filmes. A API está pronta para ser consumida por uma aplicação frontend (Next.js no caso deste projeto) e possui os seguintes endpoints:
+> <i>Esta é uma API simples para catalogo de filmes, criada com Django e Django REST Framework (DRF). Ela permite listar e acessar</i>
+> <i>detalhes de filmes. A API está pronta para ser consumida por uma aplicação frontend (Next.js no caso deste projeto) e possui</i>
+> <i>os seguintes endpoints:</i>
+
+<br>
 
 ## Endpoints da API
 
