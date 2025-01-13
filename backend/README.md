@@ -4,9 +4,7 @@
 > *It allows you to list and access movie details. The API is ready to be consumed by a frontend application*
 > *(**Next.js** in this project's case) and has the following endpoints:*
 
-## API Endpoints
-
-### 1. Movie Listing
+## 1. Movie Listing Endpoint
 
 - **Method:** `GET`
 - **Endpoint:** `/api/filmes/`
@@ -35,7 +33,7 @@
 
 <br>
 
-### 2. Movie Details
+## 2. Movie Details Endpoint
 
 - **Method:** `GET`
 - **Endpoint:** `/api/filmes/{id}/`
