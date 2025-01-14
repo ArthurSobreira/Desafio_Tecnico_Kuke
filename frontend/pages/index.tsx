@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import axios from 'axios';
+import Header from './components/Header';
 
 type Movie = {
   id: number;
@@ -14,14 +15,15 @@ type Props = {
 const Home = ({ movies }: Props) => {
   return (
     <div>
+      <Header />
       <h1>Lista de Filmes</h1>
       <ul>
         {movies.map((movie) => (
           <li key={movie.id}>
             <Link href={`/filme/${movie.id}`}>
                 <img src={movie.imagem_url} alt={movie.nome} width={100} />
-                <h2>{movie.nome}</h2>
             </Link>
+            <h2>{movie.nome}</h2>
           </li>
         ))}
       </ul>
