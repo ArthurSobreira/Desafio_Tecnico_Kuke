@@ -23,7 +23,7 @@ const Home = ({ movies }: Props) => {
         <title>Movies Catalog</title>
       </Head>
       <Header />
-      <main className="flex-grow px-8">
+      <main className="flex-grow px-8 pb-16">
         <h1 className="text-center text-3xl font-bold my-8">Movies Catalog</h1>
         <ul className="grid grid-cols-5 gap-8 justify-items-center">
           {movies.map((movie) => (
