@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import axios from 'axios';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 type Movie = {
   id: number;
@@ -14,23 +15,27 @@ type Props = {
 
 const Home = ({ movies }: Props) => {
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
       <Header />
-      <h1>Lista de Filmes</h1>
-      <ul>
-        {movies.map((movie) => (
-          <li key={movie.id}>
-            <Link href={`/filme/${movie.id}`}>
+      <main className="flex-grow">
+        <h1>Lista de Filmes</h1>
+        <ul>
+          {movies.map((movie) => (
+            <li key={movie.id}>
+              <Link href={`/filme/${movie.id}`}>
                 <img src={movie.imagem_url} alt={movie.nome} width={100} />
-            </Link>
-            <h2>{movie.nome}</h2>
-          </li>
-        ))}
-      </ul>
+              </Link>
+              <h2>{movie.nome}</h2>
+            </li>
+          ))}
+        </ul>
+      </main>
+      <Footer />
     </div>
   );
 };
 
+// Pesquisar qual seria a diferença entre usar o método getServerSideProps ou getStaticProps.
 export const getServerSideProps = async () => {
   const response = await axios.get('http://127.0.0.1:8000/api/filmes/');
   const movies: Movie[] = response.data;
