@@ -36,7 +36,7 @@ const Header = () => {
                 className="flex items-center overflow-hidden rounded-full border border-gray-300 shadow-inner dark:border-gray-600">
                 <span className="sr-only">Toggle dashboard menu</span>
 
-                <Image src="/avatar.ppg" alt="Avatar" width={40} height={40} className="object-cover" />
+                <Image src="/avatar.png" alt="Avatar" width={40} height={40} className="object-cover" />
               </button>
             </div>
           </div>
