@@ -1,62 +1,62 @@
 [
 	{
 		"nome": "Interstellar",
-		"imagem_url": "https://www.imdb.com/title/tt0816692/mediaviewer/rm3062526976/?ref_=tt_ov_i",
+		"imagem_url": "https://br.web.img3.acsta.net/c_310_420/pictures/14/10/31/20/39/476171.jpg",
 		"descricao": "When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.",
 		"ano": 2014
 	},
 	{
-		"nome": "Pulp Fiction",
-		"imagem_url": "https://www.imdb.com/title/tt0110912/mediaviewer/rm1959546112/?ref_=tt_ov_i",
-		"descricao": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
-		"ano": 1994
+		"nome": "Fight Club",
+		"imagem_url": "https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/90/95/96/20122166.jpg",
+		"descricao": "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
+		"ano": 1999
 	},
 	{
 		"nome": "Inception",
-		"imagem_url": "https://www.imdb.com/title/tt1375666/mediaviewer/rm784302848/",
+		"imagem_url": "https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/87/32/31/20028688.jpg",
 		"descricao": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
 		"ano": 2010
 	},
 	{
 		"nome": "Forrest Gump",
-		"imagem_url": "https://www.imdb.com/title/tt0109830/mediaviewer/rm1954748672/",
+		"imagem_url": "https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/87/30/21/19874092.jpg",
 		"descricao": "The history of the United States from the 1950s to the '70s unfolds from the perspective of an Alabama man with an IQ of 75, who yearns to be reunited with his childhood sweetheart.",
 		"ano": 1994
 	},
 	{
 		"nome": "The Matrix",
-		"imagem_url": "https://www.imdb.com/title/tt0133093/mediaviewer/rm525547776/?ref_=tt_ov_i",
+		"imagem_url": "https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/91/08/82/20128877.JPG",
 		"descricao": "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.",
 		"ano": 1999
 	},
 	{
 		"nome": "The Dark Knight",
-		"imagem_url": "https://www.imdb.com/title/tt0468569/mediaviewer/rm4023877632/?ref_=tt_ov_i",
+		"imagem_url": "https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/86/98/32/19870786.jpg",
 		"descricao": "When a menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman, James Gordon and Harvey Dent must work together to put an end to the madness.",
 		"ano": 2008
 	},
 	{
 		"nome": "Life Is Beautiful",
-		"imagem_url": "https://www.imdb.com/title/tt0118799/mediaviewer/rm2303464448/?ref_=tt_ov_i",
+		"imagem_url": "https://br.web.img2.acsta.net/c_310_420/medias/nmedia/18/87/87/63/19962446.jpg",
 		"descricao": "When an open-minded Jewish waiter and his son become victims of the Holocaust, he uses a perfect mixture of will, humor and imagination to protect his son from the dangers around their camp.",
 		"ano": 1997
 	},
 	{
 		"nome": "Inglourious Basterds",
-		"imagem_url": "https://www.imdb.com/title/tt0361748/mediaviewer/rm3163035648/?ref_=tt_ov_i",
+		"imagem_url": "https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/90/43/36/20096333.jpg",
 		"descricao": "In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders by a group of Jewish U.S. soldiers coincides with a theatre owner's vengeful plans for the same.",
 		"ano": 2009
 	},
 	{
 		"nome": "The Truman Show",
-		"imagem_url": "https://www.imdb.com/title/tt0120382/mediaviewer/rm1927354112/?ref_=tt_ov_i",
+		"imagem_url": "https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/93/64/37/20269376.jpg",
 		"descricao": "An insurance salesman begins to suspect that his whole life is actually some sort of reality TV show.",
 		"ano": 1998
 	},
 	{
-		"nome": "Shutter Island",
-		"imagem_url": "https://www.imdb.com/title/tt1130884/mediaviewer/rm1814907136/?ref_=tt_ov_i",
-		"descricao": "Two US marshals are sent to a mental institution on an inhospitable island in order to investigate the disappearance of a patient.",
-		"ano": 2010
+		"nome": "Back to the Future",
+		"imagem_url": "https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/90/95/62/20122008.jpg",
+		"descricao": "Marty McFly, a 17-year-old high school student, is accidentally sent 30 years into the past in a time-traveling DeLorean invented by his close friend, the maverick scientist Doc Brown.",
+		"ano": 1985
 	}
 ]
