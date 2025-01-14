@@ -13,6 +13,7 @@ type Props = {
   movies: Movie[];
 };
 
+// Formatar e deixar responsivo
 const Home = ({ movies }: Props) => {
   return (
     <div className="min-h-screen flex flex-col">
