@@ -36,7 +36,11 @@ const Header = () => {
                 className="flex items-center overflow-hidden rounded-full border border-gray-300 shadow-inner dark:border-gray-600">
                 <span className="sr-only">Toggle dashboard menu</span>
 
-                <Image src="/avatar.png" alt="Avatar" width={40} height={40} className="object-cover" />
+                <Link href="https://github.com/ArthurSobreira" passHref legacyBehavior>
+                  <a target="_blank" rel="noopener noreferrer">
+                    <Image src="/avatar.png" alt="Avatar" width={40} height={40} className="object-cover" />
+                  </a>
+                </Link>
               </button>
             </div>
           </div>
