@@ -1,6 +1,7 @@
 import { GetServerSideProps } from 'next';
 import axios from 'axios';
 import Head from 'next/head';
+import Image from 'next/image';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -25,7 +26,7 @@ const MovieDetails = ({ movie }: Props) => {
       <Header />
       <main className="flex-grow">
         <h1>{movie.nome}</h1>
-        <img src={movie.imagem_url} alt={movie.nome} width={200} />
+        <Image src={movie.imagem_url} alt={movie.nome} width={200} height={300} />
         <p><strong>Descrição:</strong> {movie.descricao}</p>
         <p><strong>Ano de Lançamento:</strong> {movie.ano}</p>
       </main>
@@ -37,14 +38,25 @@ const MovieDetails = ({ movie }: Props) => {
 // Get data from API and pass it as props to the component
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const { id } = params!;
-  // Request is made to '/api/filmes/{id}/' endpoint
-  const response = await axios.get(`http://127.0.0.1:8000/api/filmes/${id}`);
-  // Response is stored in 'movie' variable
-  const movie: Movie = response.data;
+  try {
+    // Request is made to '/api/filmes/{id}/' endpoint
+    const response = await axios.get(`http://127.0.0.1:8000/api/filmes/${id}`);
+    // Response is stored in 'movie' variable
+    const movie: Movie = response.data;
 
-  return {
-    props: { movie },
-  };
+    return {
+      props: { movie },
+    };
+  } catch (error) {
+    // If the request fails, return an error
+    if (axios.isAxiosError(error) && error.response && error.response.status === 404) {
+      return { notFound: true, };
+    } else {
+      return {
+        props: { error: 'Unexpected error occurred', },
+      };
+    }
+  }
 };
 
 export default MovieDetails;
