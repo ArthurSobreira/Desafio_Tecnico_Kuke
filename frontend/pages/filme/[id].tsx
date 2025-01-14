@@ -1,6 +1,7 @@
 import { GetServerSideProps } from 'next';
 import axios from 'axios';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 type Movie = {
   id: number;
@@ -16,12 +17,15 @@ type Props = {
 
 const MovieDetails = ({ movie }: Props) => {
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
       <Header />
-      <h1>{movie.nome}</h1>
-      <img src={movie.imagem_url} alt={movie.nome} width={200} />
-      <p><strong>Descrição:</strong> {movie.descricao}</p>
-      <p><strong>Ano de Lançamento:</strong> {movie.ano}</p>
+      <main className="flex-grow">
+        <h1>{movie.nome}</h1>
+        <img src={movie.imagem_url} alt={movie.nome} width={200} />
+        <p><strong>Descrição:</strong> {movie.descricao}</p>
+        <p><strong>Ano de Lançamento:</strong> {movie.ano}</p>
+      </main>
+      <Footer />
     </div>
   );
 };
