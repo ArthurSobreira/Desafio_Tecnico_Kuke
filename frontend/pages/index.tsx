@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import axios from 'axios';
 import Head from 'next/head';
+import Image from 'next/image';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -22,15 +23,18 @@ const Home = ({ movies }: Props) => {
         <title>Movies Catalog</title>
       </Head>
       <Header />
-      <main className="flex-grow">
-        <h1>Lista de Filmes</h1>
-        <ul>
+      <main className="flex-grow px-8">
+        <h1 className="text-center text-3xl font-bold my-8">Movies Catalog</h1>
+        <ul className="grid grid-cols-5 gap-8 justify-items-center">
           {movies.map((movie) => (
-            <li key={movie.id}>
+            <li key={movie.id} className="text-center">
               <Link href={`/filme/${movie.id}`}>
-                <img src={movie.imagem_url} alt={movie.nome} width={100} />
+                <Image
+                  src={movie.imagem_url} alt={movie.nome} width={200} height={300}
+                  className="rounded-lg shadow-lg hover:scale-105 transition-transform"
+                />
               </Link>
-              <h2>{movie.nome}</h2>
+              <h2 className="mt-4 font-medium text-lg">{movie.nome}</h2>
             </li>
           ))}
         </ul>
