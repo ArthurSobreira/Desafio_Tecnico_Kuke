@@ -36,6 +36,8 @@ const Home = ({ movies }: Props) => {
   );
 };
 
+// Testar se funciona caso eu tire o ID da serialização do objeto.
+
 // Pesquisar qual seria a diferença entre usar o método getServerSideProps ou getStaticProps.
 export const getServerSideProps = async () => {
   const response = await axios.get('http://127.0.0.1:8000/api/filmes/');
