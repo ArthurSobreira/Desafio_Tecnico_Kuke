@@ -1,3 +1,5 @@
+
+// Arrumar  a identação do código
 const Footer = () => {
   return (
     <footer className="bg-white dark:bg-gray-900 mt-auto">
