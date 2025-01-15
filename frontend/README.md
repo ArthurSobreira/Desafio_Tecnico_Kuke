@@ -2,7 +2,7 @@
 
 > *This application is a movie catalog developed with **Next.js**, **Tailwind CSS**, and uses **Axios** to make HTTP requests.*
 > *The application allows users to view a list of movies and get details about each movie. The application*
-> *communicates with a backend API developed in Django to fetch movie data. Here are the two main responsibilities of the application:*
+> *communicates with a backend API developed in Django to fetch movie data. Here are the two main responsibilities of this application:*
 
 ## 1. Movie Listing Page
 
