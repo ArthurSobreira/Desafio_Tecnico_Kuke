@@ -67,13 +67,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     };
   } catch (error) {
     // If the request fails, return an error
-    if (axios.isAxiosError(error) && error.response && error.response.status === 404) {
-      return { notFound: true, };
-    } else {
-      return {
-        props: { error: 'Unexpected error occurred', },
-      };
-    }
+    return { notFound: true, };
   }
 };
 
