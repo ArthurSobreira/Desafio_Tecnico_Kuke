@@ -6,7 +6,7 @@
 
 ## Backend - Responsibilities and Operation
 
-* The backend serves as the foundation of the Movie Catalog project, providing data management and an API interface for the frontend. Built with Django and Django REST Framework (DRF), it ensures reliable data handling and smooth front-end communication. (for more information about the API, access it [README](backend/README.md)).
+* The backend serves as the foundation of the Movie Catalog project, providing data management and an API interface for the frontend. Built with Django and Django REST Framework (DRF), it ensures reliable data handling and smooth front-end communication (for more information about the API,  visit its [README](backend/README.md)).
 
 ### Steps to Run the Backend
 
@@ -81,4 +81,26 @@ The server will be started and the API will be accessible at `http://127.0.0.1:8
 
 ## Frontend - Responsibilities and Operation
 
-*(Esta seção será preenchida quando o desenvolvimento do frontend estiver concluído.)*
+* The frontend is the user interface of the Movie Catalog project, responsible for displaying the list of movies and the details of each movie. Built with Next.js and Tailwind CSS, it offers a responsive and modern user experience (for more information on how it works, visit its [README](frontend/README.md)).
+
+### Steps to Run the Backend
+
+* First of all, make sure the API is running and accessible at `http://127.0.0.1:8000/api/filmes/`, then, in another terminal instance, enter the frontend folder:
+
+   ```bash
+   $> cd frontend/
+   ```
+
+* Install frontend dependencies:
+
+   ```bash
+   $> npm install
+   ```
+
+* Run the development server:
+
+   ```bash
+   $> npm run dev
+   ```
+
+The development server will be started and the application will be available at `http://localhost:3000`.
