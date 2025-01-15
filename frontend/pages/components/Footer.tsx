@@ -1,3 +1,4 @@
+// Component for the footer of the website
 const Footer = () => {
   return (
     <footer className="bg-white dark:bg-gray-900 mt-auto">
