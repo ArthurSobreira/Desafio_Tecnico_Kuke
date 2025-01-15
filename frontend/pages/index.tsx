@@ -49,15 +49,20 @@ const Home = ({ movies }: Props) => {
 
 // Get data from API and pass it as props to the component
 export const getStaticProps = async () => {
-  // Request is made to '/api/filmes' endpoint
-  const response = await axios.get('http://127.0.0.1:8000/api/filmes/');
-  // Response is stored in 'movies' variable
-  const movies: Movie[] = response.data;
+  try {
+    // Request is made to '/api/filmes' endpoint
+    const response = await axios.get('http://127.0.0.1:8000/api/filmes/');
+    // Response is stored in 'movies' variable
+    const movies: Movie[] = response.data;
 
-  return {
-    props: { movies },
-    revalidate: 10,
-  };
+    return {
+      props: { movies },
+      revalidate: 10,
+    };
+  } catch (error) {
+    // If the request fails, return an error
+    return { notFound: true, };
+  }
 };
 
 export default Home;
