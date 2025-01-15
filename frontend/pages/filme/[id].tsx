@@ -26,20 +26,25 @@ const MovieDetails = ({ movie }: Props) => {
       </Head>
       <Header />
       <main className="flex-grow px-8 pb-16">
+        {/* The movie name is fetched from 'nome' field */}
         <h1 className="text-center text-3xl font-bold my-8">{movie.nome}</h1>
-        <div className="flex flex-col items-center sm:flex-row sm:items-start sm:space-x-8">
-          <div className="w-full sm:w-1/3">
+        <div className="flex flex-col items-center sm:flex-row sm:justify-center sm:items-start sm:gap-8">
+          <div className="w-[300px] h-[450px] flex-shrink-0">
             {/* The movie banner is fetched from 'imagem_url' field */}
             <Image
               src={movie.imagem_url} alt={movie.nome} width={300} height={450}
-              className="rounded-lg shadow-lg"
+              className="rounded-lg shadow-lg object-cover w-full h-full"
             />
           </div>
-          <div className="mt-4 sm:mt-0 sm:w-2/3">
-            {/* The movie description is fetched from 'descricao' field */}
-            <p className="text-lg"><strong>Movie Description:</strong> {movie.descricao}</p>
-            {/* The movie release year is fetched from 'ano' field */}
-            <p className="mt-2 text-lg"><strong>Release Year:</strong> {movie.ano}</p>
+          <div className="mt-6 sm:mt-0 max-w-lg text-center sm:text-left">
+            <p className="text-lg">
+              {/* The movie description is fetched from 'descricao' field */}
+              <strong>Movie Description:</strong> {movie.descricao}
+            </p>
+            <p className="mt-4 text-lg">
+              {/* The movie release year is fetched from 'ano' field */}
+              <strong>Release Year:</strong> {movie.ano}
+            </p>
           </div>
         </div>
       </main>
