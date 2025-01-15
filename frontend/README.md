@@ -6,7 +6,7 @@
 
 ## 1. Movie Listing Page
 
-* The home page ([index.tsx](pages/index.tsx)) displays a list of movies with their images and names through a request made to the Django API using the `getStaticProps` function:
+* The home page ([index.tsx](pages/index.tsx)) displays a list of movies with their images and names. The request for this page is make to the Django API using the `getStaticProps` function:
 
 ```tsx
 // Get data from API and pass it as props to the component
