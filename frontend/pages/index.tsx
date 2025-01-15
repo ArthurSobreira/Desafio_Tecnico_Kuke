@@ -15,7 +15,7 @@ type Props = {
   movies: Movie[];
 };
 
-// Formatar e deixar responsivo
+// Receives a list of movies as props and displays them in a grid layout
 const Home = ({ movies }: Props) => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -25,16 +25,19 @@ const Home = ({ movies }: Props) => {
       <Header />
       <main className="flex-grow px-8 pb-16">
         <h1 className="text-center text-3xl font-bold my-8">Movies Catalog</h1>
-        <ul className="grid grid-cols-5 gap-8 justify-items-center">
+        <ul className=" grid gap-8 justify-items-center 
+            grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           {movies.map((movie) => (
             <li key={movie.id} className="text-center">
               <Link href={`/filme/${movie.id}`}>
+                {/* The movie banner is fetched from 'imagem_url' field */}
                 <Image
                   src={movie.imagem_url} alt={movie.nome} width={200} height={300}
                   className="rounded-lg shadow-lg hover:scale-105 transition-transform"
                 />
               </Link>
-              <h2 className="mt-4 font-medium text-lg">{movie.nome}</h2>
+              {/* The movie name is fetched from 'nome' field */}
+              <h2 className="mt-4 font-medium text-lg font-bold">{movie.nome}</h2>
             </li>
           ))}
         </ul>
