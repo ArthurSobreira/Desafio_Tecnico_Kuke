@@ -1,5 +1,3 @@
-    
-
 # Movie Catalog API
 
 > *This is a simple movie catalog API built with **Django** and **Django REST Framework (DRF)**.*
