@@ -4,9 +4,15 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
   images: {
-    domains: [
-      'br.web.img2.acsta.net', 
-      'br.web.img3.acsta.net'
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'br.web.img2.acsta.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'br.web.img3.acsta.net',
+      },
     ],
   },
 };
