@@ -19,7 +19,6 @@
 * Create and activate the virtual environment:
 
    * Unix/macOS
-  
      ```bash
      $> python3 -m venv venv
      $> source venv/bin/activate
@@ -93,14 +92,26 @@ The server will be started and the API will be accessible at `http://127.0.0.1:8
 
 * Install frontend dependencies:
 
-   ```bash
-   $> npm install
-   ```
+   * With npm
+     ```bash
+     $> npm install
+     ```
+  
+   * With yarn
+     ```bash
+     $> yarn install
+     ```
 
 * Run the development server:
 
-   ```bash
-   $> npm run dev
-   ```
+   * With npm
+     ```bash
+     $> npm run dev
+     ```
+  
+   * With yarn
+     ```bash
+     $> yarn dev
+     ```
 
 The development server will be started and the application will be available at `http://localhost:3000`.
