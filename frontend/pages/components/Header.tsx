@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+// Component for the header of the pages
 const Header = () => {
   return (
     <header className="bg-white dark:bg-gray-900">
