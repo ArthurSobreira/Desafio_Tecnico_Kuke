@@ -17,6 +17,7 @@ type Props = {
   movie: Movie;
 };
 
+// Receives a movie as props and displays its details
 const MovieDetails = ({ movie }: Props) => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -24,11 +25,23 @@ const MovieDetails = ({ movie }: Props) => {
         <title>{`${movie.nome} (${movie.ano})`}</title>
       </Head>
       <Header />
-      <main className="flex-grow">
-        <h1>{movie.nome}</h1>
-        <Image src={movie.imagem_url} alt={movie.nome} width={200} height={300} />
-        <p><strong>Descrição:</strong> {movie.descricao}</p>
-        <p><strong>Ano de Lançamento:</strong> {movie.ano}</p>
+      <main className="flex-grow px-8 pb-16">
+        <h1 className="text-center text-3xl font-bold my-8">{movie.nome}</h1>
+        <div className="flex flex-col items-center sm:flex-row sm:items-start sm:space-x-8">
+          <div className="w-full sm:w-1/3">
+            {/* The movie banner is fetched from 'imagem_url' field */}
+            <Image
+              src={movie.imagem_url} alt={movie.nome} width={300} height={450}
+              className="rounded-lg shadow-lg"
+            />
+          </div>
+          <div className="mt-4 sm:mt-0 sm:w-2/3">
+            {/* The movie description is fetched from 'descricao' field */}
+            <p className="text-lg"><strong>Movie Description:</strong> {movie.descricao}</p>
+            {/* The movie release year is fetched from 'ano' field */}
+            <p className="mt-2 text-lg"><strong>Release Year:</strong> {movie.ano}</p>
+          </div>
+        </div>
       </main>
       <Footer />
     </div>
