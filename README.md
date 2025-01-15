@@ -16,6 +16,12 @@
    $> git clone git@github.com:ArthurSobreira/Desafio_Tecnico_Kuke.git
    ```
 
+* Enter the backend folder:
+
+   ```bash
+   $> cd backend/
+   ```
+
 * Create and activate the virtual environment:
 
    * Unix/macOS
@@ -29,12 +35,6 @@
      $> python -m venv venv
      $> venv\Scripts\activate
      ```
-
-* Enter the backend folder:
-
-   ```bash
-   $> cd backend/
-   ```
 
 * Install backend dependencies:
 
