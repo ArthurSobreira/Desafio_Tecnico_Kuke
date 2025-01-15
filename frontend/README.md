@@ -62,9 +62,9 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
 
 <br>
 
-> Here are some additional details about the project's frontend: The header (Header.tsx) includes navigation links
-> and an avatar that leads to the developer's GitHub profile, while the footer (Footer.tsx) displays copyright
-> information. The navigation is responsive,
+> Here are some additional details about the project's frontend: The header ([Header.tsx](pages/components/Header.tsx))
+> includes navigation links and an avatar that leads to the my GitHub profile, while the footer
+> ([Footer.tsx](pages/components/Footer.tsx)) displays copyright information. The navigation is responsive,
 > adapting to different screen sizes to ensure a consistent user experience across devices. In addition,
 > the application effectively handles API request errors, displaying appropriate error messages to keep
 > the user informed about the application's status.
