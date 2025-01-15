@@ -82,7 +82,7 @@ The server will be started and the API will be accessible at `http://127.0.0.1:8
 
 * The frontend is the user interface of the Movie Catalog project, responsible for displaying the list of movies and the details of each movie. Built with Next.js and Tailwind CSS, it offers a responsive and modern user experience (for more information on how it works, visit its [README](frontend/README.md)).
 
-### Steps to Run the Backend
+### Steps to Run the Frontend
 
 * First of all, make sure the API is running and accessible at `http://127.0.0.1:8000/api/filmes/`, then, in another terminal instance, enter the frontend folder:
 
