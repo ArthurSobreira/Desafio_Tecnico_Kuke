@@ -1,40 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Next.js Frontend Application
 
-## Getting Started
+> *This application is a movie catalog developed with **Next.js**, **Tailwind CSS**, and uses **Axios** to make HTTP requests.*
+> *The application allows users to view a list of movies and get details about each movie. The application*
+> *communicates with a backend API developed in Django to fetch movie data. Here are the two main responsibilities of the application:*
 
-First, run the development server:
+## 1. Movie Listing Page
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+* The home page ([index.tsx](pages/index.tsx)) displays a list of movies with their images and names through a request made to the Django API using the `getStaticProps` function:
+
+```tsx
+// Get data from API and pass it as props to the component
+export const getStaticProps = async () => {
+  try {
+    // Request is made to '/api/filmes' endpoint
+    const response = await axios.get('http://127.0.0.1:8000/api/filmes/');
+    // Response is stored in 'movies' variable
+    const movies: Movie[] = response.data;
+
+    return {
+      props: { movies },
+      revalidate: 10,
+    };
+  } catch (error) {
+    // If the request fails, return an error
+    return { notFound: true, };
+  }
+};
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<br>
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## 2. Movie Details Page
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+* Each movie in the list has a link that leads to a details page ([[id].tsx](pages/filme/[id].tsx)), where additional information about the movie is displayed. Like the main page, the details page makes a request to Django API to fetch detailed information about a specific movie identified by an `id` attribute, this time using the `getServerSideProps` function:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+```tsx
+// Get data from API and pass it as props to the component
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+  const { id } = params!;
+  try {
+    // Request is made to '/api/filmes/{id}/' endpoint
+    const response = await axios.get(`http://127.0.0.1:8000/api/filmes/${id}`);
+    // Response is stored in 'movie' variable
+    const movie: Movie = response.data;
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    return {
+      props: { movie },
+    };
+  } catch (error) {
+    // If the request fails, return an error
+    if (axios.isAxiosError(error) && error.response && error.response.status === 404) {
+      return { notFound: true, };
+    } else {
+      return {
+        props: { error: 'Unexpected error occurred', },
+      };
+    }
+  }
+};
+```
 
-## Learn More
+<br>
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+> Here are some additional details about the project's frontend: The header (Header.tsx) includes navigation links
+> and an avatar that leads to the developer's GitHub profile, while the footer (Footer.tsx) displays copyright
+> information. The navigation is responsive,
+> adapting to different screen sizes to ensure a consistent user experience across devices. In addition,
+> the application effectively handles API request errors, displaying appropriate error messages to keep
+> the user informed about the application's status.
